@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       IMAGE_NAME: sretest
-      PROJECT_ID: ambient-mystery-415617
+      PROJECT_ID: glassy-outcome-415920
     steps:
       - uses: actions/checkout@v4
 

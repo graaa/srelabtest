@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: srelabdeployment
-        image: us-south1-docker.pkg.dev/ambient-mystery-415617/lab1mod2/sretest:latest
+        image: us-south1-docker.pkg.dev/glassy-outcome-415920/lab1mod2/sretest:latest
         ports:
         - containerPort: 80
 ---
