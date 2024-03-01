@@ -30,6 +30,6 @@ jobs:
 
     - name: deploy to gke
       run: |
-        gcloud containers clusters get-credentials lab-mod2 --region us-south1
+        gcloud container clusters get-credentials lab-mod2 --region us-south1
         kubectl apply -f resources.yaml
 
