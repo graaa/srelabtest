@@ -16,7 +16,7 @@ spec:
       - name: srelabdeployment
         image: us-south1-docker.pkg.dev/glassy-outcome-415920/lab1mod2/sretest:latest
         ports:
-        - containerPort: 80
+        - containerPort: 5000
 ---
 apiVersion: v1
 kind: Service
@@ -26,6 +26,6 @@ spec:
   type: LoadBalancer
   ports:
   - port: 80
-    targetPort: 80
+    targetPort: 5000
   selector:
     app: srelabdeployment
