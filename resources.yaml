@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: srelabdeployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: srelabdeployment
+  template:
+    metadata:
+      labels:
+        app: srelabdeployment
+    spec:
+      containers:
+      - name: srelabdeployment
+        image: us-south1-docker.pkg.dev/ambient-mystery-415617/lab1mod2/sretest:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: srelabdeployment-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: srelabdeployment

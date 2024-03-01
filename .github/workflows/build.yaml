@@ -27,3 +27,9 @@ jobs:
       run: |-
         docker tag $IMAGE_NAME:latest us-south1-docker.pkg.dev/$PROJECT_ID/lab1mod2/$IMAGE_NAME:latest
         docker push us-south1-docker.pkg.dev/$PROJECT_ID/lab1mod2/$IMAGE_NAME:latest
+
+    - name: deploy to gke
+      run: |
+        gcloud containers clusters get-credentials lab-mod2 --region us-south1
+        kubectl apply -f resources.yaml
+
