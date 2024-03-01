@@ -30,7 +30,7 @@ jobs:
 
     - name: deploy to gke
       run: |
-        sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin --quiet
+        gcloud components install gke-gcloud-auth-plugin
         gcloud container clusters get-credentials lab-mod2 --region us-south1
         kubectl apply -f resources.yaml
 
