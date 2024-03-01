@@ -34,3 +34,4 @@ jobs:
         gcloud container clusters get-credentials lab-mod2 --region us-south1
         kubectl apply -f resources.yaml
 
+##
